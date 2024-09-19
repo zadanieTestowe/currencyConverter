@@ -64,15 +64,15 @@ export const CurrencyConverter = () => {
         onChange={handleConvert}
       />
       <CurrencyDropdown
-        value={currency.from}
-        options={currencyList}
+        value={currency.from || ""}
+        options={currencyList!}
         placeholder="Select currency to convert from"
         onChange={(currency) => handleCurrencySelection(currency, "from")}
       />
       <span className="converter__label">convert to:</span>
       <CurrencyDropdown
-        value={currency.to}
-        options={currencyList}
+        value={currency.to || ""}
+        options={currencyList!}
         placeholder="Select currency to convert to"
         onChange={(currency) => handleCurrencySelection(currency, "to")}
       />
